@@ -1,0 +1,1775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="IntakeForm">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Active"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActiveVeteran"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ActivityLogCount"
+        Association="ActivityLogCount_IntakeForm"
+        FromEnd="IntakeForm"
+        ToEnd="ActivityLogCount" />
+      <EntityProperty
+        Name="BirthDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="c_Property"
+        Association="FK_IntakeForm_Properties"
+        FromEnd="IntakeForm"
+        ToEnd="Properties">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Property" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="CellPhone"
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ChronicHomeless"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ConsentFormSigned"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ConsentForTDG"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="DailyActivityLogs"
+        Association="FK_DailyActivityLog_IntakeForm"
+        FromEnd="IntakeForm"
+        ToEnd="DailyActivityLog" />
+      <EntityProperty
+        Name="DateCaseClosed"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DateCaseOpened"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Disabled"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DischargeNotes"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <NotSortable />
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="DischargingSP"
+        Association="FK_IntakeForm_ServiceProviders1"
+        FromEnd="IntakeForm"
+        ToEnd="ServiceProviders" />
+      <EntityProperty
+        Name="EmergencyContactName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmergencyContactPhone"
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmergencyContactRelationship"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ethnicity"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Caucasian"
+            Value="Caucasian" />
+          <SupportedValue
+            DisplayName="Hispanic"
+            Value="Hispanic" />
+          <SupportedValue
+            DisplayName="African American"
+            Value="African American" />
+          <SupportedValue
+            DisplayName="Asian - Pacific Islander"
+            Value="Asian - Pacific Islander" />
+          <SupportedValue
+            Value="Other" />
+          <Description
+            Value="Old Ethnicity - no longer used" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ethnicity2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            Value="Hispanic or Latino" />
+          <SupportedValue
+            Value="Not Hispanic or Latino" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeOfInfo"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeOfInfoDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeOfInfoExpiryDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FarmWorker"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FirstName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HomePhone"
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HousedMoreThan12Mos"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HousedMoreThan6Mos"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HouseholdID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HouseHoldNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HPRP"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="IntakeLogs"
+        Association="FK_IntakeLogs_IntakeForm"
+        FromEnd="IntakeForm"
+        ToEnd="IntakeLogs" />
+      <EntityProperty
+        Name="InternalDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MediCal"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Medicare"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MemorialConsent"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NoHealthInsurance"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="POAName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="POAPhone"
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PowerOfAttorney"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PrivateHealthInsurance"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PsychotropicMedications"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Race"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="American Indian or Alaskan Native Origin"
+            Value="American Indian/Alaskan Native Origin" />
+          <SupportedValue
+            DisplayName="Asian"
+            Value="Asian" />
+          <SupportedValue
+            DisplayName="Black or African American"
+            Value="Black/African American" />
+          <SupportedValue
+            DisplayName="Native Hawaiian or Other Pacific Islander"
+            Value="Native Hawaiian/Other Pacific Islander" />
+          <SupportedValue
+            DisplayName="White"
+            Value="White" />
+          <SupportedValue
+            DisplayName="Mixed Race"
+            Value="Mixed Race" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="individual does not know" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReferralIdentity"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReferralSource"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="PSHH property management"
+            Value="PSHH property management" />
+          <SupportedValue
+            DisplayName="Other PSHH departments"
+            Value="Other PSHH departments" />
+          <SupportedValue
+            DisplayName="SHP Social worker referral"
+            Value="SHP Social worker referral" />
+          <SupportedValue
+            DisplayName="Community organization"
+            Value="Community organization" />
+          <SupportedValue
+            DisplayName="Client self-referral"
+            Value="Client self-referral" />
+          <SupportedValue
+            DisplayName="Family/neighbor/friend referral"
+            Value="Family/neighbor/friend referral" />
+          <SupportedValue
+            DisplayName="Other (with no additional information)"
+            Value="Other (with no additional information)" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReferralType"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Homeless Placement"
+            Value="Homeless Placement" />
+          <SupportedValue
+            DisplayName="Homeless Prevention"
+            Value="Homeless Prevention" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RentersInsurance"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Section8"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ServiceProvider1"
+        Association="FK_IntakeForm_ServiceProviders"
+        FromEnd="IntakeForm"
+        ToEnd="ServiceProviders" />
+      <EntityProperty
+        Name="Sex"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Male"
+            Value="Male" />
+          <SupportedValue
+            DisplayName="Female"
+            Value="Female" />
+          <SupportedValue
+            DisplayName="Transgendered Male to Female"
+            Value="Transgendered Male to Female" />
+          <SupportedValue
+            DisplayName="Transgendered Female to Male"
+            Value="Transgendered Female to Male" />
+          <SupportedValue
+            DisplayName="Other"
+            Value="Other" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SingleFemaleHeadOfHousehold"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusAtDischarge"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            Value="Non Compliant" />
+          <SupportedValue
+            Value="Withdrew from program" />
+          <SupportedValue
+            Value="Moved" />
+          <SupportedValue
+            DisplayName="Moved to transitional housing"
+            Value="Moved to transitional housing" />
+          <SupportedValue
+            Value="Evicted" />
+          <SupportedValue
+            DisplayName="Became homeless"
+            Value="Became homeless" />
+          <SupportedValue
+            DisplayName="Deceased"
+            Value="Deceased" />
+          <SupportedValue
+            DisplayName="Goals completed"
+            Value="Goals completed" />
+          <SupportedValue
+            DisplayName="Reason unknown"
+            Value="Reason unknown" />
+          <SupportedValue
+            Value="Other" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TBRA"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UID"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Unit_"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VASH"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Veteran"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeadofHousehold"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DisabilityStatus"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <SupportedValue
+            DisplayName="Yes, individual indicates disability as defined in ADA"
+            Value="Yes, individual indicates disability as defined in ADA" />
+          <SupportedValue
+            DisplayName="No, individual indicates no disability as defined by ADA"
+            Value="No, individual indicates no disability as defined by ADA" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DisablityCatagory"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+          <SupportedValue
+            DisplayName="Impairment is primarily physical, including mobility and sensory impairments"
+            Value="Impairment is primarily physical, including mobility and sensory impairments" />
+          <SupportedValue
+            DisplayName="Impairment is primarily mental, including cognitive and learning impairments"
+            Value="Impairment is primarily mental, including cognitive and learning impairments" />
+          <SupportedValue
+            DisplayName="Impairment is both physical and mental"
+            Value="Impairment is both physical and mental" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="Individual does not have an impairment"
+            Value="Individual does not have an impairment" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DisabilityRequiresAssistance"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <SupportedValue
+            DisplayName="The disabled individual requires services to manage home activities"
+            Value="The disabled individual requires services to manage home activities" />
+          <SupportedValue
+            DisplayName="The disabled individual does not require services for home management"
+            Value="The disabled individual does not require services for home management" />
+          <SupportedValue
+            DisplayName="The disabled individual was not assessed for this criteria"
+            Value="The disabled individual was not assessed for this criteria" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SupplementalNutritionAssistanceProgram"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TemporaryAssistanceToNeedyFamilies"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SupplementalSecurityIncome"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SocialSecurityDisabilityInsurance"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SubstanceAbuseTreatment"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+          <SupportedValue
+            DisplayName="The individual is being treated for substance abuse or dependence"
+            Value="The individual is being treated for substance abuse or dependence" />
+          <SupportedValue
+            DisplayName="The individual is not being treated for substance abuse or dependence, but did receive treatment in the last 12 months"
+            Value="The individual is not being treated for substance abuse or dependence, but did receive treatment in the last 12 months" />
+          <SupportedValue
+            DisplayName="The individual was not treated for substance abuse or dependence in the last 12 months, but did receive treatment over a year ago"
+            Value="The individual was not treated for substance abuse or dependence in the last 12 months, but did receive treatment over a year ago" />
+          <SupportedValue
+            DisplayName="The individual never received treatment for substance abuse or dependence"
+            Value="The individual never received treatment for substance abuse or dependence" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActivitiesOfDailyLiving"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="0"
+            Value="0" />
+          <SupportedValue
+            DisplayName="1"
+            Value="1" />
+          <SupportedValue
+            DisplayName="2"
+            Value="2" />
+          <SupportedValue
+            DisplayName="3"
+            Value="3" />
+          <SupportedValue
+            DisplayName="4"
+            Value="4" />
+          <SupportedValue
+            DisplayName="5"
+            Value="5" />
+          <SupportedValue
+            DisplayName="6"
+            Value="6" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InstrumentalActiviesOfDailyLivingCount"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="0"
+            Value="0" />
+          <SupportedValue
+            DisplayName="1"
+            Value="1" />
+          <SupportedValue
+            DisplayName="2"
+            Value="2" />
+          <SupportedValue
+            DisplayName="3"
+            Value="3" />
+          <SupportedValue
+            DisplayName="4"
+            Value="4" />
+          <SupportedValue
+            DisplayName="5"
+            Value="5" />
+          <SupportedValue
+            DisplayName="6"
+            Value="6" />
+          <SupportedValue
+            DisplayName="7"
+            Value="7" />
+          <SupportedValue
+            DisplayName="8"
+            Value="8" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PrimaryHealthCareProvider"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+          <SupportedValue
+            DisplayName="N/A"
+            Value="N/A" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HighestEducationLevel"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <SupportedValue
+            DisplayName="No Schooling Completed, Nursery school, or Kindergarten"
+            Value="No Schooling Completed, Nursery school, or Kindergarten" />
+          <SupportedValue
+            DisplayName="Grade 1"
+            Value="Grade 1" />
+          <SupportedValue
+            DisplayName="Grade 2"
+            Value="Grade 2" />
+          <SupportedValue
+            DisplayName="Grade 3"
+            Value="Grade 3" />
+          <SupportedValue
+            DisplayName="Grade 4"
+            Value="Grade 4" />
+          <SupportedValue
+            DisplayName="Grade 5"
+            Value="Grade 5" />
+          <SupportedValue
+            DisplayName="Grade 6"
+            Value="Grade 6" />
+          <SupportedValue
+            DisplayName="Grade 7"
+            Value="Grade 7" />
+          <SupportedValue
+            DisplayName="Grade 8"
+            Value="Grade 8" />
+          <SupportedValue
+            DisplayName="Grade 9"
+            Value="Grade 9" />
+          <SupportedValue
+            DisplayName="Grade 10"
+            Value="Grade 10" />
+          <SupportedValue
+            DisplayName="Grade 11"
+            Value="Grade 11" />
+          <SupportedValue
+            DisplayName="12th grade, no diploma"
+            Value="12th grade, no diploma" />
+          <SupportedValue
+            DisplayName="High school diploma"
+            Value="High school diploma" />
+          <SupportedValue
+            DisplayName="GED or alternative credential"
+            Value="GED or alternative credential" />
+          <SupportedValue
+            DisplayName="Less than one year of college credit"
+            Value="Less than one year of college credit" />
+          <SupportedValue
+            DisplayName="One or more years of college credit, no degree"
+            Value="One or more years of college credit, no degree" />
+          <SupportedValue
+            DisplayName="Associate’s degree"
+            Value="Associate’s degree" />
+          <SupportedValue
+            DisplayName="Bachelor’s degree"
+            Value="Bachelor’s degree" />
+          <SupportedValue
+            DisplayName="Master’s degree"
+            Value="Master’s degree" />
+          <SupportedValue
+            DisplayName="Professional degree (MD, DDS, DVM, LLB, JD)"
+            Value="Professional degree (MD, DDS, DVM, LLB, JD)" />
+          <SupportedValue
+            DisplayName="Doctorate degree"
+            Value="Doctorate degree" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Veteran2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="Yes" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Individual refused"
+            Value="Individual refused" />
+          <SupportedValue
+            DisplayName="Individual does not know"
+            Value="Individual does not know" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MoveInDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RegisteredVoter"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BankAccount"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            DisplayName="No"
+            Value="No" />
+          <SupportedValue
+            DisplayName="Checking"
+            Value="Checking" />
+          <SupportedValue
+            DisplayName="Savings"
+            Value="Savings" />
+          <SupportedValue
+            DisplayName="Checking and Savings"
+            Value="Checking and Savings" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="HealthCoverageJunctions"
+        Association="FK_HealthCoverageJunction_IntakeForm"
+        FromEnd="IntakeForm"
+        ToEnd="HealthCoverageJunction" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_DailyActivityLog_IntakeForm">
+    <AssociationEnd
+      Name="IntakeForm"
+      Multiplicity="One"
+      EntityType="IntakeForm">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Cascade" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="DailyActivityLog"
+      Multiplicity="Many"
+      EntityType="DailyActivityLog" />
+  </Association>
+  <EntityContainer
+    Name="SHPSQL1_DEVData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="IntakeForms"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="IntakeForm" />
+    <AssociationSet
+      Name="FK_DailyActivityLog_IntakeForm"
+      Association="FK_DailyActivityLog_IntakeForm">
+      <AssociationSetEnd
+        Name="IntakeForm"
+        EntitySet="IntakeForms" />
+      <AssociationSetEnd
+        Name="DailyActivityLog"
+        EntitySet="DailyActivityLogs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="IntakeForms_Single"
+      ReturnType="IntakeForm">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="IntakeForms" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="IntakeForms_SingleOrDefault"
+      ReturnType="IntakeForm">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="IntakeForms" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_IntakeLogs_IntakeForm"
+      Association="FK_IntakeLogs_IntakeForm">
+      <AssociationSetEnd
+        Name="IntakeForm"
+        EntitySet="IntakeForms" />
+      <AssociationSetEnd
+        Name="IntakeLogs"
+        EntitySet="IntakeLogs" />
+    </AssociationSet>
+    <AssociationSet
+      Name="ActivityLogCount_IntakeForms"
+      Association="ActivityLogCount_IntakeForm">
+      <AssociationSetEnd
+        Name="ActivityLogCount"
+        EntitySet="ActivityLogCounts" />
+      <AssociationSetEnd
+        Name="IntakeForm"
+        EntitySet="IntakeForms" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_HealthCoverageJunction_IntakeForm"
+      Association="FK_HealthCoverageJunction_IntakeForm">
+      <AssociationSetEnd
+        Name="IntakeForm"
+        EntitySet="IntakeForms" />
+      <AssociationSetEnd
+        Name="HealthCoverageJunction"
+        EntitySet="HealthCoverageJunctions" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association
+    Name="FK_IntakeLogs_IntakeForm">
+    <AssociationEnd
+      Name="IntakeForm"
+      EntityType="IntakeForm">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="IntakeLogs"
+      Multiplicity="Many"
+      EntityType="IntakeLog" />
+  </Association>
+  <Association
+    Name="ActivityLogCount_IntakeForm">
+    <Association.Attributes>
+      <UserDefined />
+    </Association.Attributes>
+    <AssociationEnd
+      Name="ActivityLogCount"
+      EntityType="ActivityLogCount" />
+    <AssociationEnd
+      Name="IntakeForm"
+      Multiplicity="One"
+      EntityType="IntakeForm">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="FK_HealthCoverageJunction_IntakeForm">
+    <AssociationEnd
+      Name="IntakeForm"
+      Multiplicity="One"
+      EntityType="IntakeForm">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Cascade" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="HealthCoverageJunction"
+      Multiplicity="Many"
+      EntityType="HealthCoverageJunction" />
+  </Association>
+  <DataService
+    Name="SHPSQL1_DEVDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="IntakeForms">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="IntakeForm" />
+        <SsdlProperty
+          Name="ID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="IntakeForm/Properties[ID]" />
+        <SsdlProperty
+          Name="InternalDate"
+          Nullable="True"
+          Type="datetime"
+          Property="IntakeForm/Properties[InternalDate]" />
+        <SsdlProperty
+          Name="DateCaseOpened"
+          Nullable="False"
+          Type="datetime"
+          Property="IntakeForm/Properties[DateCaseOpened]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Unit#"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[Unit_]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="LastName"
+          Nullable="False"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[LastName]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="FirstName"
+          Nullable="False"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[FirstName]" />
+        <SsdlProperty
+          Name="BirthDate"
+          Nullable="False"
+          Type="datetime"
+          Property="IntakeForm/Properties[BirthDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HouseHoldNumber"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[HouseHoldNumber]" />
+        <SsdlProperty
+          MaxLength="25"
+          Name="HomePhone"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[HomePhone]" />
+        <SsdlProperty
+          MaxLength="25"
+          Name="CellPhone"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[CellPhone]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmergencyContactName"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[EmergencyContactName]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmergencyContactPhone"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[EmergencyContactPhone]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmergencyContactRelationship"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[EmergencyContactRelationship]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Sex"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[Sex]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Ethnicity"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[Ethnicity]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReferralType"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[ReferralType]" />
+        <SsdlProperty
+          Name="Veteran"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[Veteran]" />
+        <SsdlProperty
+          Name="Section8"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[Section8]" />
+        <SsdlProperty
+          Name="TBRA"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[TBRA]" />
+        <SsdlProperty
+          Name="Disabled"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[Disabled]" />
+        <SsdlProperty
+          Name="PsychotropicMedications"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[PsychotropicMedications]" />
+        <SsdlProperty
+          Name="MediCal"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[MediCal]" />
+        <SsdlProperty
+          Name="Medicare"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[Medicare]" />
+        <SsdlProperty
+          Name="ChronicHomeless"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[ChronicHomeless]" />
+        <SsdlProperty
+          Name="PrivateHealthInsurance"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[PrivateHealthInsurance]" />
+        <SsdlProperty
+          Name="NoHealthInsurance"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[NoHealthInsurance]" />
+        <SsdlProperty
+          Name="FarmWorker"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[FarmWorker]" />
+        <SsdlProperty
+          Name="ConsentFormSigned"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[ConsentFormSigned]" />
+        <SsdlProperty
+          Name="SingleFemaleHeadOfHousehold"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[SingleFemaleHeadOfHousehold]" />
+        <SsdlProperty
+          Name="HPRP"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[HPRP]" />
+        <SsdlProperty
+          Name="VASH"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[VASH]" />
+        <SsdlProperty
+          Name="Modified"
+          Nullable="True"
+          Type="datetime"
+          Property="IntakeForm/Properties[Modified]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Ethnicity2"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[Ethnicity2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Race"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[Race]" />
+        <SsdlProperty
+          Name="PowerOfAttorney"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[PowerOfAttorney]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="POAName"
+          Nullable="True"
+          Type="varchar"
+          Property="IntakeForm/Properties[POAName]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="POAPhone"
+          Nullable="True"
+          Type="varchar"
+          Property="IntakeForm/Properties[POAPhone]" />
+        <SsdlProperty
+          Name="ConsentForTDG"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[ConsentForTDG]" />
+        <SsdlProperty
+          Name="ActiveVeteran"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[ActiveVeteran]" />
+        <SsdlProperty
+          Name="ExchangeOfInfo"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[ExchangeOfInfo]" />
+        <SsdlProperty
+          Name="ExchangeOfInfoDate"
+          Nullable="True"
+          Type="date"
+          Property="IntakeForm/Properties[ExchangeOfInfoDate]" />
+        <SsdlProperty
+          Name="ExchangeOfInfoExpiryDate"
+          Nullable="True"
+          Type="date"
+          Property="IntakeForm/Properties[ExchangeOfInfoExpiryDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReferralSource"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[ReferralSource]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReferralIdentity"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[ReferralIdentity]" />
+        <SsdlProperty
+          Name="DateCaseClosed"
+          Nullable="True"
+          Type="datetime"
+          Property="IntakeForm/Properties[DateCaseClosed]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="StatusAtDischarge"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[StatusAtDischarge]" />
+        <SsdlProperty
+          Name="DischargeNotes"
+          Nullable="True"
+          Type="ntext"
+          Property="IntakeForm/Properties[DischargeNotes]" />
+        <SsdlProperty
+          Name="Active"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[Active]" />
+        <SsdlProperty
+          Name="HousedMoreThan6Mos"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[HousedMoreThan6Mos]" />
+        <SsdlProperty
+          Name="HousedMoreThan12Mos"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[HousedMoreThan12Mos]" />
+        <SsdlProperty
+          Name="RentersInsurance"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[RentersInsurance]" />
+        <SsdlProperty
+          Name="MemorialConsent"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[MemorialConsent]" />
+        <SsdlProperty
+          Name="UID"
+          Nullable="False"
+          Type="uniqueidentifier"
+          Property="IntakeForm/Properties[UID]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="HouseholdID"
+          Nullable="True"
+          Type="varchar"
+          Property="IntakeForm/Properties[HouseholdID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HeadofHousehold"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[HeadofHousehold]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="DisabilityStatus"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[DisabilityStatus]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="DisablityCatagory"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[DisablityCatagory]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="DisabilityRequiresAssistance"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[DisabilityRequiresAssistance]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="SupplementalNutritionAssistanceProgram"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[SupplementalNutritionAssistanceProgram]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TemporaryAssistanceToNeedyFamilies"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[TemporaryAssistanceToNeedyFamilies]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="SupplementalSecurityIncome"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[SupplementalSecurityIncome]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="SocialSecurityDisabilityInsurance"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[SocialSecurityDisabilityInsurance]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="SubstanceAbuseTreatment"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[SubstanceAbuseTreatment]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ActivitiesOfDailyLiving"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[ActivitiesOfDailyLiving]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="InstrumentalActiviesOfDailyLivingCount"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[InstrumentalActiviesOfDailyLivingCount]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="PrimaryHealthCareProvider"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[PrimaryHealthCareProvider]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HighestEducationLevel"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[HighestEducationLevel]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Veteran2"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[Veteran2]" />
+        <SsdlProperty
+          Name="MoveInDate"
+          Nullable="True"
+          Type="date"
+          Property="IntakeForm/Properties[MoveInDate]" />
+        <SsdlProperty
+          Name="RegisteredVoter"
+          Nullable="True"
+          Type="bit"
+          Property="IntakeForm/Properties[RegisteredVoter]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="BankAccount"
+          Nullable="True"
+          Type="nvarchar"
+          Property="IntakeForm/Properties[BankAccount]" />
+        <SsdlForeignKeyProperty
+          MaxLength="50"
+          Name="PSHHProperty"
+          Nullable="False"
+          Type="nvarchar"
+          PropertyName="PSHHProperty" />
+        <SsdlForeignKeyProperty
+          Name="ServiceProvider"
+          Nullable="False"
+          Type="int"
+          PropertyName="ServiceProvider" />
+        <SsdlForeignKeyProperty
+          Name="DischargedBySP"
+          Nullable="True"
+          Type="int"
+          PropertyName="DischargedBySP" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_DailyActivityLog_IntakeForm">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_DailyActivityLog_IntakeForm" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_DailyActivityLog_IntakeForm]/Members[IntakeForm]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_DailyActivityLog_IntakeForm]/Members[DailyActivityLog]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Resident" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_HealthCoverageJunction_IntakeForm">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_HealthCoverageJunction_IntakeForm" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_HealthCoverageJunction_IntakeForm]/Members[IntakeForm]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_HealthCoverageJunction_IntakeForm]/Members[HealthCoverageJunction]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="IntakeFormFK" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_IntakeLogs_IntakeForm">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_IntakeLogs_IntakeForm" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_IntakeLogs_IntakeForm]/Members[IntakeForm]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_IntakeLogs_IntakeForm]/Members[IntakeLogs]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="IntakeFormFK" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="ActivityLogCount_IntakeForms">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="ActivityLogCount_IntakeForms" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[ActivityLogCount_IntakeForms]/Members[ActivityLogCount]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[ActivityLogCount_IntakeForms]/Members[IntakeForm]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

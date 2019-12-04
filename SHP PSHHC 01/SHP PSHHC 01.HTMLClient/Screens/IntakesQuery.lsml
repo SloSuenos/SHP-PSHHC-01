@@ -1,0 +1,3373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.SHP_PSHHC_01.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="IntakesQuery">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="SHPSQL1_DEVData" />
+      <DisplayName
+        Value="Intakes Search" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="IntakeFormList"
+            Kind="Group">
+            <ContentItem
+              Name="Group"
+              Kind="Group"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem
+                Name="BirthDate1"
+                Kind="Value"
+                DataType=":Date?"
+                View="Microsoft.LightSwitch.MobileWeb:DatePicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Birth Date Start" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[BirthDate]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="BirthDate11"
+                Kind="Value"
+                DataType=":Date?"
+                View="Microsoft.LightSwitch.MobileWeb:DatePicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Birth Date End" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[BirthDate1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Active1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Not Discharged" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Active]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ActiveVeteran"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ActiveVeteran]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ChronicHomeless1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Chron Homeless" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ChronicHomeless]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ConsentFormSigned1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Consent Signed" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ConsentFormSigned]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Disabled1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Disabled]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Ethnicity2"
+                Kind="Value"
+                DataType=":String?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Ethnicity2]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ExchangeOfInfo"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Exchange of Info" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ExchangeOfInfo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="FarmWorker1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[FarmWorker]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="MediCal1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[MediCal]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Medicare1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Medicare]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="NoHealthInsurance1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="No Health Ins" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[NoHealthInsurance]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="PrivateHealthInsurance1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Priv Health Ins" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[PrivateHealthInsurance]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              Name="Group1"
+              Kind="Group"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem
+                Name="DateCaseOpened1"
+                Kind="Value"
+                DataType=":Date?"
+                View="Microsoft.LightSwitch.MobileWeb:DatePicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Date Opened Start" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[DateCaseOpened]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="DateCaseOpened11"
+                Kind="Value"
+                DataType=":Date?"
+                View="Microsoft.LightSwitch.MobileWeb:DatePicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Date Opened End" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[DateCaseOpened1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="PowerOfAttorney"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Pwr of Attorney" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[PowerOfAttorney]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="PsychotropicMedications1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Psych Meds" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[PsychotropicMedications]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ReferralType1"
+                Kind="Value"
+                DataType=":String?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ReferralType]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ReferralSource"
+                Kind="Value"
+                DataType=":String?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ReferralSource]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Race"
+                Kind="Value"
+                DataType=":String?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Race]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Section81"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Section 8" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Section8]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Sex1"
+                Kind="Value"
+                DataType=":String?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Gender" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Sex]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="SingleFemaleHeadOfHousehold1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="SFHoH" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[SingleFemaleHeadOfHousehold]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="TBRA1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[TBRA]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ConsentForTDG"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="TDG Consent" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ConsentForTDG]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="VASH1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[VASH]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Veteran1"
+                Kind="Value"
+                DataType=":Boolean?"
+                View="Microsoft.LightSwitch.MobileWeb:ValueDropdown">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[Veteran]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              Name="Group3"
+              Kind="Group"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem
+                Name="City1"
+                Kind="Details"
+                DataType="SelectCity"
+                View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="City" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[City1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="City1Template"
+                  Kind="Details"
+                  DataType="SelectCity">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="SelectCity"
+                    Kind="Details"
+                    DataType="SelectCity">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FitToContent"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="County"
+                Kind="Details"
+                DataType="SelectCounty"
+                View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[County]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="CountyTemplate"
+                  Kind="Details"
+                  DataType="SelectCounty">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="SelectCounty"
+                    Kind="Details"
+                    DataType="SelectCounty">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="FixedSize"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="93"
+                            ResultType=":Double" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FitToContent"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="c_Property11"
+                Kind="Details"
+                DataType="c_Property"
+                View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Property" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[c_Property1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="c_Property11Template"
+                  Kind="Details"
+                  DataType="c_Property">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Property" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="c_Property2"
+                    Kind="Details"
+                    DataType="c_Property">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="FixedSize"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="93"
+                            ResultType=":Double" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FitToContent"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ServiceProviderID"
+                Kind="Details"
+                DataType="ServiceProvider"
+                View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Service Provider" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[ServiceProviderID]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="ServiceProviderIDTemplate"
+                  Kind="Details"
+                  DataType="ServiceProvider">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="ServiceProvider2"
+                    Kind="Details"
+                    DataType="ServiceProvider">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="FixedSize"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="93"
+                            ResultType=":Double" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FitToContent"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="93"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              Name="Group2"
+              Kind="Group"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem
+                Name="FindIntakes"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="[ SEARCH ]" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="IntakesQuery/Methods[RunQuery]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="120"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="QCount"
+                Kind="Value"
+                DataType=":Int32">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Intakes Found:" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[QCount]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="LeftAligned"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="40"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="QDisCount"
+                Kind="Value"
+                DataType=":Int32">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Discharged:" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[QDisCount]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="LeftAligned"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="40"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="QNotDisCount"
+                Kind="Value"
+                DataType=":Int32">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Not Discharged:" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="IntakesQuery/Properties[QNotDisCount]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="LeftAligned"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FixedSize"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="40"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootGroup/Properties[CompactMargins]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="False"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="QIntakeFormScreen"
+              Kind="Collection"
+              DataType="CollectionView$IntakeForm"
+              View="Microsoft.LightSwitch.MobileWeb:Table">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="IntakesQuery/Properties[QIntakeFormScreen]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="QIntakeForm1Template"
+                Kind="Details"
+                DataType="IntakeForm">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Active"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Not Discharged" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[Active]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="DateCaseOpened"
+                  Kind="Value"
+                  DataType=":Date">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Case Opened" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[DateCaseOpened]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="LastName"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[LastName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="FirstName"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[FirstName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="BirthDate"
+                  Kind="Value"
+                  DataType=":Date">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[BirthDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="c_Property"
+                  Kind="Details"
+                  DataType="c_Property">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[c_Property]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="c_Property1"
+                    Kind="Details"
+                    DataType="c_Property">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="Unit_"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[Unit_]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ServiceProvider1"
+                  Kind="Details"
+                  DataType="ServiceProvider">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Service Provider" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[ServiceProvider1]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="ServiceProvider"
+                    Kind="Details"
+                    DataType="ServiceProvider">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="ActivityLogCount"
+                  Kind="Details"
+                  DataType="ActivityLogCount"
+                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Activities" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="IntakeForm/Properties[ActivityLogCount]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="ID"
+                    Kind="Value"
+                    DataType=":Int32">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="ActivityLogCount/Properties[ID]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="LogCount"
+                    Kind="Value"
+                    DataType=":Int64?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="ActivityLogCount/Properties[LogCount]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="FixedSize"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="90"
+                            ResultType=":Double" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[TextAlignment]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Center"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootGroup/Properties[CompactMargins]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="True"
+                          ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showViewIntakeForm]">
+                        <CallExpression.Attributes>
+                          <AssociatedCollection
+                            Collection="IntakesQuery/Properties[QIntakeFormScreen]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="IntakeForm">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="IntakesQuery/Properties[QIntakeFormScreen]" />
+                            <MemberExpression
+                              Member="selectedItem" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="SearchQIntakeForm"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Return" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showBrowseHome]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-back"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem.CommandItems>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.MobileWeb:RootGroup/Properties[CompactMargins]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="True"
+                      ResultType=":Boolean" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="RunQuery" />
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="QIntakeFormScreen"
+        DisablePaging="True"
+        PageSize="45"
+        PropertyType="CollectionView$IntakeForm">
+        <ScreenCollectionProperty.Attributes>
+          <DisplayName
+            Value="QIntakeForm" />
+        </ScreenCollectionProperty.Attributes>
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="QIntakeFormScreenQuery"
+            ReturnType="IntakeForm*">
+            <ScreenQueryDefinition.Attributes>
+              <DisplayName
+                Value="QIntakeFormDScreenQuery" />
+            </ScreenQueryDefinition.Attributes>
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="And">
+                  <BinaryExpression.Left>
+                    <BinaryExpression
+                      NodeType="And">
+                      <BinaryExpression.Left>
+                        <BinaryExpression
+                          NodeType="And">
+                          <BinaryExpression.Left>
+                            <BinaryExpression
+                              NodeType="And">
+                              <BinaryExpression.Left>
+                                <BinaryExpression
+                                  NodeType="And">
+                                  <BinaryExpression.Left>
+                                    <BinaryExpression
+                                      NodeType="And">
+                                      <BinaryExpression.Left>
+                                        <BinaryExpression
+                                          NodeType="And">
+                                          <BinaryExpression.Left>
+                                            <BinaryExpression
+                                              NodeType="And">
+                                              <BinaryExpression.Left>
+                                                <BinaryExpression
+                                                  NodeType="And">
+                                                  <BinaryExpression.Left>
+                                                    <BinaryExpression
+                                                      NodeType="And">
+                                                      <BinaryExpression.Left>
+                                                        <BinaryExpression
+                                                          NodeType="And">
+                                                          <BinaryExpression.Left>
+                                                            <BinaryExpression
+                                                              NodeType="And">
+                                                              <BinaryExpression.Left>
+                                                                <BinaryExpression
+                                                                  NodeType="And">
+                                                                  <BinaryExpression.Left>
+                                                                    <BinaryExpression
+                                                                      NodeType="And">
+                                                                      <BinaryExpression.Left>
+                                                                        <BinaryExpression
+                                                                          NodeType="And">
+                                                                          <BinaryExpression.Left>
+                                                                            <BinaryExpression
+                                                                              NodeType="And">
+                                                                              <BinaryExpression.Left>
+                                                                                <BinaryExpression
+                                                                                  NodeType="And">
+                                                                                  <BinaryExpression.Left>
+                                                                                    <BinaryExpression
+                                                                                      NodeType="And">
+                                                                                      <BinaryExpression.Left>
+                                                                                        <BinaryExpression
+                                                                                          NodeType="And">
+                                                                                          <BinaryExpression.Left>
+                                                                                            <BinaryExpression
+                                                                                              NodeType="And">
+                                                                                              <BinaryExpression.Left>
+                                                                                                <BinaryExpression
+                                                                                                  NodeType="And">
+                                                                                                  <BinaryExpression.Left>
+                                                                                                    <BinaryExpression
+                                                                                                      NodeType="And">
+                                                                                                      <BinaryExpression.Left>
+                                                                                                        <BinaryExpression
+                                                                                                          NodeType="And">
+                                                                                                          <BinaryExpression.Left>
+                                                                                                            <BinaryExpression
+                                                                                                              NodeType="And">
+                                                                                                              <BinaryExpression.Left>
+                                                                                                                <BinaryExpression
+                                                                                                                  NodeType="And">
+                                                                                                                  <BinaryExpression.Left>
+                                                                                                                    <BinaryExpression
+                                                                                                                      NodeType="And">
+                                                                                                                      <BinaryExpression.Left>
+                                                                                                                        <BinaryExpression
+                                                                                                                          NodeType="And">
+                                                                                                                          <BinaryExpression.Left>
+                                                                                                                            <BinaryExpression
+                                                                                                                              NodeType="And">
+                                                                                                                              <BinaryExpression.Left>
+                                                                                                                                <BinaryExpression
+                                                                                                                                  NodeType="And">
+                                                                                                                                  <BinaryExpression.Left>
+                                                                                                                                    <BinaryExpression
+                                                                                                                                      NodeType="And">
+                                                                                                                                      <BinaryExpression.Left>
+                                                                                                                                        <BinaryExpression
+                                                                                                                                          NodeType="Equal">
+                                                                                                                                          <BinaryExpression.Left>
+                                                                                                                                            <ChainExpression>
+                                                                                                                                              <MemberExpression
+                                                                                                                                                Member="IntakeForm/Properties[Active]" />
+                                                                                                                                            </ChainExpression>
+                                                                                                                                          </BinaryExpression.Left>
+                                                                                                                                          <BinaryExpression.Right>
+                                                                                                                                            <ParameterExpression
+                                                                                                                                              Parameter="Active" />
+                                                                                                                                          </BinaryExpression.Right>
+                                                                                                                                        </BinaryExpression>
+                                                                                                                                      </BinaryExpression.Left>
+                                                                                                                                      <BinaryExpression.Right>
+                                                                                                                                        <TernaryExpression
+                                                                                                                                          NodeType="Between">
+                                                                                                                                          <TernaryExpression.First>
+                                                                                                                                            <ChainExpression>
+                                                                                                                                              <MemberExpression
+                                                                                                                                                Member="IntakeForm/Properties[BirthDate]" />
+                                                                                                                                            </ChainExpression>
+                                                                                                                                          </TernaryExpression.First>
+                                                                                                                                          <TernaryExpression.Second>
+                                                                                                                                            <ParameterExpression
+                                                                                                                                              Parameter="BirthDate" />
+                                                                                                                                          </TernaryExpression.Second>
+                                                                                                                                          <TernaryExpression.Third>
+                                                                                                                                            <ParameterExpression
+                                                                                                                                              Parameter="BirthDate1" />
+                                                                                                                                          </TernaryExpression.Third>
+                                                                                                                                        </TernaryExpression>
+                                                                                                                                      </BinaryExpression.Right>
+                                                                                                                                    </BinaryExpression>
+                                                                                                                                  </BinaryExpression.Left>
+                                                                                                                                  <BinaryExpression.Right>
+                                                                                                                                    <BinaryExpression
+                                                                                                                                      NodeType="Equal">
+                                                                                                                                      <BinaryExpression.Left>
+                                                                                                                                        <ChainExpression>
+                                                                                                                                          <MemberExpression
+                                                                                                                                            Member="IntakeForm/Properties[ChronicHomeless]" />
+                                                                                                                                        </ChainExpression>
+                                                                                                                                      </BinaryExpression.Left>
+                                                                                                                                      <BinaryExpression.Right>
+                                                                                                                                        <ParameterExpression
+                                                                                                                                          Parameter="ChronicHomeless" />
+                                                                                                                                      </BinaryExpression.Right>
+                                                                                                                                    </BinaryExpression>
+                                                                                                                                  </BinaryExpression.Right>
+                                                                                                                                </BinaryExpression>
+                                                                                                                              </BinaryExpression.Left>
+                                                                                                                              <BinaryExpression.Right>
+                                                                                                                                <BinaryExpression
+                                                                                                                                  NodeType="Equal">
+                                                                                                                                  <BinaryExpression.Left>
+                                                                                                                                    <ChainExpression>
+                                                                                                                                      <MemberExpression
+                                                                                                                                        Member="IntakeForm/Properties[ConsentFormSigned]" />
+                                                                                                                                    </ChainExpression>
+                                                                                                                                  </BinaryExpression.Left>
+                                                                                                                                  <BinaryExpression.Right>
+                                                                                                                                    <ParameterExpression
+                                                                                                                                      Parameter="ConsentFormSigned" />
+                                                                                                                                  </BinaryExpression.Right>
+                                                                                                                                </BinaryExpression>
+                                                                                                                              </BinaryExpression.Right>
+                                                                                                                            </BinaryExpression>
+                                                                                                                          </BinaryExpression.Left>
+                                                                                                                          <BinaryExpression.Right>
+                                                                                                                            <TernaryExpression
+                                                                                                                              NodeType="Between">
+                                                                                                                              <TernaryExpression.First>
+                                                                                                                                <ChainExpression>
+                                                                                                                                  <MemberExpression
+                                                                                                                                    Member="IntakeForm/Properties[DateCaseOpened]" />
+                                                                                                                                </ChainExpression>
+                                                                                                                              </TernaryExpression.First>
+                                                                                                                              <TernaryExpression.Second>
+                                                                                                                                <ParameterExpression
+                                                                                                                                  Parameter="DateCaseOpened" />
+                                                                                                                              </TernaryExpression.Second>
+                                                                                                                              <TernaryExpression.Third>
+                                                                                                                                <ParameterExpression
+                                                                                                                                  Parameter="DateCaseOpened1" />
+                                                                                                                              </TernaryExpression.Third>
+                                                                                                                            </TernaryExpression>
+                                                                                                                          </BinaryExpression.Right>
+                                                                                                                        </BinaryExpression>
+                                                                                                                      </BinaryExpression.Left>
+                                                                                                                      <BinaryExpression.Right>
+                                                                                                                        <BinaryExpression
+                                                                                                                          NodeType="Equal">
+                                                                                                                          <BinaryExpression.Left>
+                                                                                                                            <ChainExpression>
+                                                                                                                              <MemberExpression
+                                                                                                                                Member="IntakeForm/Properties[Disabled]" />
+                                                                                                                            </ChainExpression>
+                                                                                                                          </BinaryExpression.Left>
+                                                                                                                          <BinaryExpression.Right>
+                                                                                                                            <ParameterExpression
+                                                                                                                              Parameter="Disabled" />
+                                                                                                                          </BinaryExpression.Right>
+                                                                                                                        </BinaryExpression>
+                                                                                                                      </BinaryExpression.Right>
+                                                                                                                    </BinaryExpression>
+                                                                                                                  </BinaryExpression.Left>
+                                                                                                                  <BinaryExpression.Right>
+                                                                                                                    <BinaryExpression
+                                                                                                                      NodeType="Equal">
+                                                                                                                      <BinaryExpression.Left>
+                                                                                                                        <ChainExpression>
+                                                                                                                          <MemberExpression
+                                                                                                                            Member="IntakeForm/Properties[FarmWorker]" />
+                                                                                                                        </ChainExpression>
+                                                                                                                      </BinaryExpression.Left>
+                                                                                                                      <BinaryExpression.Right>
+                                                                                                                        <ParameterExpression
+                                                                                                                          Parameter="FarmWorker" />
+                                                                                                                      </BinaryExpression.Right>
+                                                                                                                    </BinaryExpression>
+                                                                                                                  </BinaryExpression.Right>
+                                                                                                                </BinaryExpression>
+                                                                                                              </BinaryExpression.Left>
+                                                                                                              <BinaryExpression.Right>
+                                                                                                                <BinaryExpression
+                                                                                                                  NodeType="Equal">
+                                                                                                                  <BinaryExpression.Left>
+                                                                                                                    <ChainExpression>
+                                                                                                                      <MemberExpression
+                                                                                                                        Member="IntakeForm/Properties[MediCal]" />
+                                                                                                                    </ChainExpression>
+                                                                                                                  </BinaryExpression.Left>
+                                                                                                                  <BinaryExpression.Right>
+                                                                                                                    <ParameterExpression
+                                                                                                                      Parameter="MediCal" />
+                                                                                                                  </BinaryExpression.Right>
+                                                                                                                </BinaryExpression>
+                                                                                                              </BinaryExpression.Right>
+                                                                                                            </BinaryExpression>
+                                                                                                          </BinaryExpression.Left>
+                                                                                                          <BinaryExpression.Right>
+                                                                                                            <BinaryExpression
+                                                                                                              NodeType="Equal">
+                                                                                                              <BinaryExpression.Left>
+                                                                                                                <ChainExpression>
+                                                                                                                  <MemberExpression
+                                                                                                                    Member="IntakeForm/Properties[Medicare]" />
+                                                                                                                </ChainExpression>
+                                                                                                              </BinaryExpression.Left>
+                                                                                                              <BinaryExpression.Right>
+                                                                                                                <ParameterExpression
+                                                                                                                  Parameter="Medicare" />
+                                                                                                              </BinaryExpression.Right>
+                                                                                                            </BinaryExpression>
+                                                                                                          </BinaryExpression.Right>
+                                                                                                        </BinaryExpression>
+                                                                                                      </BinaryExpression.Left>
+                                                                                                      <BinaryExpression.Right>
+                                                                                                        <BinaryExpression
+                                                                                                          NodeType="Equal">
+                                                                                                          <BinaryExpression.Left>
+                                                                                                            <ChainExpression>
+                                                                                                              <MemberExpression
+                                                                                                                Member="IntakeForm/Properties[NoHealthInsurance]" />
+                                                                                                            </ChainExpression>
+                                                                                                          </BinaryExpression.Left>
+                                                                                                          <BinaryExpression.Right>
+                                                                                                            <ParameterExpression
+                                                                                                              Parameter="NoHealthInsurance" />
+                                                                                                          </BinaryExpression.Right>
+                                                                                                        </BinaryExpression>
+                                                                                                      </BinaryExpression.Right>
+                                                                                                    </BinaryExpression>
+                                                                                                  </BinaryExpression.Left>
+                                                                                                  <BinaryExpression.Right>
+                                                                                                    <BinaryExpression
+                                                                                                      NodeType="Equal">
+                                                                                                      <BinaryExpression.Left>
+                                                                                                        <ChainExpression>
+                                                                                                          <MemberExpression
+                                                                                                            Member="IntakeForm/Properties[PrivateHealthInsurance]" />
+                                                                                                        </ChainExpression>
+                                                                                                      </BinaryExpression.Left>
+                                                                                                      <BinaryExpression.Right>
+                                                                                                        <ParameterExpression
+                                                                                                          Parameter="PrivateHealthInsurance" />
+                                                                                                      </BinaryExpression.Right>
+                                                                                                    </BinaryExpression>
+                                                                                                  </BinaryExpression.Right>
+                                                                                                </BinaryExpression>
+                                                                                              </BinaryExpression.Left>
+                                                                                              <BinaryExpression.Right>
+                                                                                                <BinaryExpression
+                                                                                                  NodeType="Equal">
+                                                                                                  <BinaryExpression.Left>
+                                                                                                    <ChainExpression>
+                                                                                                      <MemberExpression
+                                                                                                        Member="IntakeForm/Properties[PsychotropicMedications]" />
+                                                                                                    </ChainExpression>
+                                                                                                  </BinaryExpression.Left>
+                                                                                                  <BinaryExpression.Right>
+                                                                                                    <ParameterExpression
+                                                                                                      Parameter="PsychotropicMedications" />
+                                                                                                  </BinaryExpression.Right>
+                                                                                                </BinaryExpression>
+                                                                                              </BinaryExpression.Right>
+                                                                                            </BinaryExpression>
+                                                                                          </BinaryExpression.Left>
+                                                                                          <BinaryExpression.Right>
+                                                                                            <BinaryExpression
+                                                                                              NodeType="Equal">
+                                                                                              <BinaryExpression.Left>
+                                                                                                <ChainExpression>
+                                                                                                  <MemberExpression
+                                                                                                    Member="IntakeForm/Properties[ReferralType]" />
+                                                                                                </ChainExpression>
+                                                                                              </BinaryExpression.Left>
+                                                                                              <BinaryExpression.Right>
+                                                                                                <ParameterExpression
+                                                                                                  Parameter="ReferralType" />
+                                                                                              </BinaryExpression.Right>
+                                                                                            </BinaryExpression>
+                                                                                          </BinaryExpression.Right>
+                                                                                        </BinaryExpression>
+                                                                                      </BinaryExpression.Left>
+                                                                                      <BinaryExpression.Right>
+                                                                                        <BinaryExpression
+                                                                                          NodeType="Equal">
+                                                                                          <BinaryExpression.Left>
+                                                                                            <ChainExpression>
+                                                                                              <MemberExpression
+                                                                                                Member="IntakeForm/Properties[Section8]" />
+                                                                                            </ChainExpression>
+                                                                                          </BinaryExpression.Left>
+                                                                                          <BinaryExpression.Right>
+                                                                                            <ParameterExpression
+                                                                                              Parameter="Section8" />
+                                                                                          </BinaryExpression.Right>
+                                                                                        </BinaryExpression>
+                                                                                      </BinaryExpression.Right>
+                                                                                    </BinaryExpression>
+                                                                                  </BinaryExpression.Left>
+                                                                                  <BinaryExpression.Right>
+                                                                                    <BinaryExpression
+                                                                                      NodeType="Equal">
+                                                                                      <BinaryExpression.Left>
+                                                                                        <ChainExpression>
+                                                                                          <MemberExpression
+                                                                                            Member="IntakeForm/Properties[Sex]" />
+                                                                                        </ChainExpression>
+                                                                                      </BinaryExpression.Left>
+                                                                                      <BinaryExpression.Right>
+                                                                                        <ParameterExpression
+                                                                                          Parameter="Sex" />
+                                                                                      </BinaryExpression.Right>
+                                                                                    </BinaryExpression>
+                                                                                  </BinaryExpression.Right>
+                                                                                </BinaryExpression>
+                                                                              </BinaryExpression.Left>
+                                                                              <BinaryExpression.Right>
+                                                                                <BinaryExpression
+                                                                                  NodeType="Equal">
+                                                                                  <BinaryExpression.Left>
+                                                                                    <ChainExpression>
+                                                                                      <MemberExpression
+                                                                                        Member="IntakeForm/Properties[SingleFemaleHeadOfHousehold]" />
+                                                                                    </ChainExpression>
+                                                                                  </BinaryExpression.Left>
+                                                                                  <BinaryExpression.Right>
+                                                                                    <ParameterExpression
+                                                                                      Parameter="SingleFemaleHeadOfHousehold" />
+                                                                                  </BinaryExpression.Right>
+                                                                                </BinaryExpression>
+                                                                              </BinaryExpression.Right>
+                                                                            </BinaryExpression>
+                                                                          </BinaryExpression.Left>
+                                                                          <BinaryExpression.Right>
+                                                                            <BinaryExpression
+                                                                              NodeType="Equal">
+                                                                              <BinaryExpression.Left>
+                                                                                <ChainExpression>
+                                                                                  <MemberExpression
+                                                                                    Member="IntakeForm/Properties[TBRA]" />
+                                                                                </ChainExpression>
+                                                                              </BinaryExpression.Left>
+                                                                              <BinaryExpression.Right>
+                                                                                <ParameterExpression
+                                                                                  Parameter="TBRA" />
+                                                                              </BinaryExpression.Right>
+                                                                            </BinaryExpression>
+                                                                          </BinaryExpression.Right>
+                                                                        </BinaryExpression>
+                                                                      </BinaryExpression.Left>
+                                                                      <BinaryExpression.Right>
+                                                                        <BinaryExpression
+                                                                          NodeType="Equal">
+                                                                          <BinaryExpression.Left>
+                                                                            <ChainExpression>
+                                                                              <MemberExpression
+                                                                                Member="IntakeForm/Properties[VASH]" />
+                                                                            </ChainExpression>
+                                                                          </BinaryExpression.Left>
+                                                                          <BinaryExpression.Right>
+                                                                            <ParameterExpression
+                                                                              Parameter="VASH" />
+                                                                          </BinaryExpression.Right>
+                                                                        </BinaryExpression>
+                                                                      </BinaryExpression.Right>
+                                                                    </BinaryExpression>
+                                                                  </BinaryExpression.Left>
+                                                                  <BinaryExpression.Right>
+                                                                    <BinaryExpression
+                                                                      NodeType="Equal">
+                                                                      <BinaryExpression.Left>
+                                                                        <ChainExpression>
+                                                                          <MemberExpression
+                                                                            Member="IntakeForm/Properties[Veteran]" />
+                                                                        </ChainExpression>
+                                                                      </BinaryExpression.Left>
+                                                                      <BinaryExpression.Right>
+                                                                        <ParameterExpression
+                                                                          Parameter="Veteran" />
+                                                                      </BinaryExpression.Right>
+                                                                    </BinaryExpression>
+                                                                  </BinaryExpression.Right>
+                                                                </BinaryExpression>
+                                                              </BinaryExpression.Left>
+                                                              <BinaryExpression.Right>
+                                                                <BinaryExpression
+                                                                  NodeType="Equal">
+                                                                  <BinaryExpression.Left>
+                                                                    <ChainExpression>
+                                                                      <MemberExpression
+                                                                        Member="IntakeForm/Properties[ServiceProvider1]" />
+                                                                      <MemberExpression
+                                                                        Member="ServiceProviderID" />
+                                                                    </ChainExpression>
+                                                                  </BinaryExpression.Left>
+                                                                  <BinaryExpression.Right>
+                                                                    <ParameterExpression
+                                                                      Parameter="ServiceProviderID" />
+                                                                  </BinaryExpression.Right>
+                                                                </BinaryExpression>
+                                                              </BinaryExpression.Right>
+                                                            </BinaryExpression>
+                                                          </BinaryExpression.Left>
+                                                          <BinaryExpression.Right>
+                                                            <BinaryExpression
+                                                              NodeType="Equal">
+                                                              <BinaryExpression.Left>
+                                                                <ChainExpression>
+                                                                  <MemberExpression
+                                                                    Member="IntakeForm/Properties[c_Property]" />
+                                                                  <MemberExpression
+                                                                    Member="Property_ID" />
+                                                                </ChainExpression>
+                                                              </BinaryExpression.Left>
+                                                              <BinaryExpression.Right>
+                                                                <ParameterExpression
+                                                                  Parameter="Property_ID" />
+                                                              </BinaryExpression.Right>
+                                                            </BinaryExpression>
+                                                          </BinaryExpression.Right>
+                                                        </BinaryExpression>
+                                                      </BinaryExpression.Left>
+                                                      <BinaryExpression.Right>
+                                                        <BinaryExpression
+                                                          NodeType="Equal">
+                                                          <BinaryExpression.Left>
+                                                            <ChainExpression>
+                                                              <MemberExpression
+                                                                Member="IntakeForm/Properties[c_Property]" />
+                                                              <MemberExpression
+                                                                Member="City" />
+                                                            </ChainExpression>
+                                                          </BinaryExpression.Left>
+                                                          <BinaryExpression.Right>
+                                                            <ParameterExpression
+                                                              Parameter="City" />
+                                                          </BinaryExpression.Right>
+                                                        </BinaryExpression>
+                                                      </BinaryExpression.Right>
+                                                    </BinaryExpression>
+                                                  </BinaryExpression.Left>
+                                                  <BinaryExpression.Right>
+                                                    <BinaryExpression
+                                                      NodeType="Equal">
+                                                      <BinaryExpression.Left>
+                                                        <ChainExpression>
+                                                          <MemberExpression
+                                                            Member="IntakeForm/Properties[c_Property]" />
+                                                          <MemberExpression
+                                                            Member="County" />
+                                                        </ChainExpression>
+                                                      </BinaryExpression.Left>
+                                                      <BinaryExpression.Right>
+                                                        <ParameterExpression
+                                                          Parameter="County" />
+                                                      </BinaryExpression.Right>
+                                                    </BinaryExpression>
+                                                  </BinaryExpression.Right>
+                                                </BinaryExpression>
+                                              </BinaryExpression.Left>
+                                              <BinaryExpression.Right>
+                                                <BinaryExpression
+                                                  NodeType="Equal">
+                                                  <BinaryExpression.Left>
+                                                    <ChainExpression>
+                                                      <MemberExpression
+                                                        Member="IntakeForm/Properties[Ethnicity2]" />
+                                                    </ChainExpression>
+                                                  </BinaryExpression.Left>
+                                                  <BinaryExpression.Right>
+                                                    <ParameterExpression
+                                                      Parameter="Ethnicity2" />
+                                                  </BinaryExpression.Right>
+                                                </BinaryExpression>
+                                              </BinaryExpression.Right>
+                                            </BinaryExpression>
+                                          </BinaryExpression.Left>
+                                          <BinaryExpression.Right>
+                                            <BinaryExpression
+                                              NodeType="Equal">
+                                              <BinaryExpression.Left>
+                                                <ChainExpression>
+                                                  <MemberExpression
+                                                    Member="IntakeForm/Properties[Race]" />
+                                                </ChainExpression>
+                                              </BinaryExpression.Left>
+                                              <BinaryExpression.Right>
+                                                <ParameterExpression
+                                                  Parameter="Race" />
+                                              </BinaryExpression.Right>
+                                            </BinaryExpression>
+                                          </BinaryExpression.Right>
+                                        </BinaryExpression>
+                                      </BinaryExpression.Left>
+                                      <BinaryExpression.Right>
+                                        <BinaryExpression
+                                          NodeType="Equal">
+                                          <BinaryExpression.Left>
+                                            <ChainExpression>
+                                              <MemberExpression
+                                                Member="IntakeForm/Properties[ID]" />
+                                            </ChainExpression>
+                                          </BinaryExpression.Left>
+                                          <BinaryExpression.Right>
+                                            <ParameterExpression
+                                              Parameter="ID" />
+                                          </BinaryExpression.Right>
+                                        </BinaryExpression>
+                                      </BinaryExpression.Right>
+                                    </BinaryExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <BinaryExpression
+                                      NodeType="Equal">
+                                      <BinaryExpression.Left>
+                                        <ChainExpression>
+                                          <MemberExpression
+                                            Member="IntakeForm/Properties[PowerOfAttorney]" />
+                                        </ChainExpression>
+                                      </BinaryExpression.Left>
+                                      <BinaryExpression.Right>
+                                        <ParameterExpression
+                                          Parameter="PowerOfAttorney" />
+                                      </BinaryExpression.Right>
+                                    </BinaryExpression>
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
+                              </BinaryExpression.Left>
+                              <BinaryExpression.Right>
+                                <BinaryExpression
+                                  NodeType="Equal">
+                                  <BinaryExpression.Left>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="IntakeForm/Properties[ConsentForTDG]" />
+                                    </ChainExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <ParameterExpression
+                                      Parameter="ConsentForTDG" />
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
+                              </BinaryExpression.Right>
+                            </BinaryExpression>
+                          </BinaryExpression.Left>
+                          <BinaryExpression.Right>
+                            <BinaryExpression
+                              NodeType="Equal">
+                              <BinaryExpression.Left>
+                                <ChainExpression>
+                                  <MemberExpression
+                                    Member="IntakeForm/Properties[ActiveVeteran]" />
+                                </ChainExpression>
+                              </BinaryExpression.Left>
+                              <BinaryExpression.Right>
+                                <ParameterExpression
+                                  Parameter="ActiveVeteran" />
+                              </BinaryExpression.Right>
+                            </BinaryExpression>
+                          </BinaryExpression.Right>
+                        </BinaryExpression>
+                      </BinaryExpression.Left>
+                      <BinaryExpression.Right>
+                        <BinaryExpression
+                          NodeType="Equal">
+                          <BinaryExpression.Left>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="IntakeForm/Properties[ExchangeOfInfo]" />
+                            </ChainExpression>
+                          </BinaryExpression.Left>
+                          <BinaryExpression.Right>
+                            <ParameterExpression
+                              Parameter="ExchangeOfInfo" />
+                          </BinaryExpression.Right>
+                        </BinaryExpression>
+                      </BinaryExpression.Right>
+                    </BinaryExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <BinaryExpression
+                      NodeType="Equal">
+                      <BinaryExpression.Left>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="IntakeForm/Properties[ReferralSource]" />
+                        </ChainExpression>
+                      </BinaryExpression.Left>
+                      <BinaryExpression.Right>
+                        <ParameterExpression
+                          Parameter="ReferralSource" />
+                      </BinaryExpression.Right>
+                    </BinaryExpression>
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SHPSQL1_DEVData/Members[QIntakeForm]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="Active"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="BirthDate"
+                IsOptional="True"
+                ParameterType=":Date?" />
+              <QueryParameter
+                Name="BirthDate1"
+                IsOptional="True"
+                ParameterType=":Date?" />
+              <QueryParameter
+                Name="ChronicHomeless"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ConsentFormSigned"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="DateCaseOpened"
+                IsOptional="True"
+                ParameterType=":Date?" />
+              <QueryParameter
+                Name="DateCaseOpened1"
+                IsOptional="True"
+                ParameterType=":Date?" />
+              <QueryParameter
+                Name="Disabled"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="FarmWorker"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="MediCal"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="Medicare"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="NoHealthInsurance"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="PrivateHealthInsurance"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="PsychotropicMedications"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ReferralType"
+                IsOptional="True"
+                ParameterType=":String?" />
+              <QueryParameter
+                Name="Section8"
+                IsOptional="True"
+                ParameterType=":Boolean?">
+                <QueryParameter.Attributes>
+                  <DisplayName
+                    Value="Section 8" />
+                </QueryParameter.Attributes>
+              </QueryParameter>
+              <QueryParameter
+                Name="Sex"
+                IsOptional="True"
+                ParameterType=":String?" />
+              <QueryParameter
+                Name="SingleFemaleHeadOfHousehold"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="TBRA"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="VASH"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="Veteran"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ServiceProviderID"
+                IsOptional="True"
+                ParameterType=":Int32?" />
+              <QueryParameter
+                Name="Property_ID"
+                IsOptional="True"
+                ParameterType=":Int32?" />
+              <QueryParameter
+                Name="City"
+                IsOptional="True"
+                ParameterType=":String?" />
+              <QueryParameter
+                Name="County"
+                IsOptional="True"
+                ParameterType=":String?" />
+              <QueryParameter
+                Name="Ethnicity2"
+                IsOptional="True"
+                ParameterType=":String?">
+                <QueryParameter.Attributes>
+                  <DisplayName
+                    Value="Ethnicity" />
+                </QueryParameter.Attributes>
+              </QueryParameter>
+              <QueryParameter
+                Name="Race"
+                IsOptional="True"
+                ParameterType=":String?" />
+              <QueryParameter
+                Name="ID"
+                IsOptional="True"
+                ParameterType=":Int32?" />
+              <QueryParameter
+                Name="PowerOfAttorney"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ConsentForTDG"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ActiveVeteran"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ExchangeOfInfo"
+                IsOptional="True"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="ReferralSource"
+                IsOptional="True"
+                ParameterType=":String?" />
+            </ScreenQueryDefinition.Parameters>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="IntakesQuery/Properties[QIntakeFormScreen]/Query">
+              <ArgumentExpression
+                Parameter="Active">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Active]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="BirthDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[BirthDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="BirthDate1">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[BirthDate1]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ChronicHomeless">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ChronicHomeless]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ConsentFormSigned">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ConsentFormSigned]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="DateCaseOpened">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[DateCaseOpened]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="DateCaseOpened1">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[DateCaseOpened1]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Disabled">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Disabled]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="FarmWorker">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[FarmWorker]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="MediCal">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[MediCal]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Medicare">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Medicare]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="NoHealthInsurance">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[NoHealthInsurance]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="PrivateHealthInsurance">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[PrivateHealthInsurance]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="PsychotropicMedications">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[PsychotropicMedications]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ReferralType">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ReferralType]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Section8">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Section8]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Sex">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Sex]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="SingleFemaleHeadOfHousehold">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[SingleFemaleHeadOfHousehold]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="TBRA">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[TBRA]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="VASH">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[VASH]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Veteran">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Veteran]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ServiceProviderID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ServiceProviderID]" />
+                  <MemberExpression
+                    Member="ServiceProviderID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Property_ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[c_Property1]" />
+                  <MemberExpression
+                    Member="Property_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="City">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[City1]" />
+                  <MemberExpression
+                    Member="City" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="County">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[County]" />
+                  <MemberExpression
+                    Member="County" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Ethnicity2">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Ethnicity2]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Race">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[Race]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="PowerOfAttorney">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[PowerOfAttorney]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ConsentForTDG">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ConsentForTDG]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ActiveVeteran">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ActiveVeteran]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ExchangeOfInfo">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ExchangeOfInfo]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ReferralSource">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="IntakesQuery/Properties[ReferralSource]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="Active"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName="True"
+            Value="True" />
+          <SupportedValue
+            DisplayName="False"
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="BirthDate"
+        PropertyType=":Date?" />
+      <ScreenProperty
+        Name="BirthDate1"
+        PropertyType=":Date?" />
+      <ScreenProperty
+        Name="ChronicHomeless"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName=""
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ConsentFormSigned"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="DateCaseOpened"
+        PropertyType=":Date?" />
+      <ScreenProperty
+        Name="DateCaseOpened1"
+        PropertyType=":Date?" />
+      <ScreenProperty
+        Name="Disabled"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="FarmWorker"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="MediCal"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            DisplayName=""
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Medicare"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="NoHealthInsurance"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="PrivateHealthInsurance"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="PsychotropicMedications"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ReferralType"
+        PropertyType=":String?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="Homeless Placement" />
+          <SupportedValue
+            Value="Homeless Prevention" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Section8"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Sex"
+        PropertyType=":String?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="Male" />
+          <SupportedValue
+            Value="Female" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="SingleFemaleHeadOfHousehold"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="TBRA"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="VASH"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Veteran"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="True" />
+          <SupportedValue
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="c_Property1"
+        PropertyType="c_Property">
+        <ScreenProperty.Attributes>
+          <DisplayName
+            Value="Property" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ServiceProviderID"
+        PropertyType="ServiceProvider" />
+      <ScreenProperty
+        Name="City1"
+        PropertyType="SelectCity">
+        <ScreenProperty.Attributes>
+          <DisplayName
+            Value="City" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="County"
+        PropertyType="SelectCounty" />
+      <ScreenProperty
+        Name="QCount"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="QDisCount"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="QNotDisCount"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Ethnicity2"
+        PropertyType=":String?">
+        <ScreenProperty.Attributes>
+          <DisplayName
+            Value="Ethnicity" />
+          <SupportedValue
+            Value="Hispanic or Latino" />
+          <SupportedValue
+            Value="Not Hispanic or Latino" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Race"
+        PropertyType=":String?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            Value="White" />
+          <SupportedValue
+            Value="Black / African American" />
+          <SupportedValue
+            Value="Asian / Pacific Islander" />
+          <SupportedValue
+            Value="American Indian / Alaska Native" />
+          <SupportedValue
+            Value="American Indian / Alaska Native and White" />
+          <SupportedValue
+            Value="Native Hawaiian / Other Pacific Islander" />
+          <SupportedValue
+            Value="Asian and White" />
+          <SupportedValue
+            Value="Black / African American and White" />
+          <SupportedValue
+            Value="American Indian / Alaska Native and Black / African American" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ID"
+        PropertyType=":Int32?" />
+      <ScreenProperty
+        Name="PowerOfAttorney"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName="True"
+            Value="True" />
+          <SupportedValue
+            DisplayName="False"
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ConsentForTDG"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName="True"
+            Value="True" />
+          <SupportedValue
+            DisplayName="False"
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ActiveVeteran"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName="True"
+            Value="True" />
+          <SupportedValue
+            DisplayName="False"
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ExchangeOfInfo"
+        PropertyType=":Boolean?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName="True"
+            Value="True" />
+          <SupportedValue
+            DisplayName="False"
+            Value="False" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ReferralSource"
+        PropertyType=":String?">
+        <ScreenProperty.Attributes>
+          <SupportedValue
+            DisplayName="PSHH property management"
+            Value="PSHH property management" />
+          <SupportedValue
+            DisplayName="Other PSHH departments"
+            Value="Other PSHH departments" />
+          <SupportedValue
+            DisplayName="SHP Social worker referral"
+            Value="SHP Social worker referral" />
+          <SupportedValue
+            DisplayName="Community organization"
+            Value="Community organization" />
+          <SupportedValue
+            DisplayName="Client self-referral"
+            Value="Client self-referral" />
+          <SupportedValue
+            DisplayName="Family/neighbor/friend referral"
+            Value="Family/neighbor/friend referral" />
+          <SupportedValue
+            DisplayName="Other (with no additional information)"
+            Value="Other (with no additional information)" />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+    </Screen.Properties>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="showIntakesQuery">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="IntakesQuery" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>

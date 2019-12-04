@@ -1,0 +1,1215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="DailyActivityLog">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="InternalDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="c_Date"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HoursSpent"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+          <SupportedValue
+            DisplayName=":15"
+            Value="0.25" />
+          <SupportedValue
+            DisplayName=":30"
+            Value="0.5" />
+          <SupportedValue
+            DisplayName=":45"
+            Value="0.75" />
+          <SupportedValue
+            DisplayName="1:00"
+            Value="1" />
+          <SupportedValue
+            DisplayName="1:15"
+            Value="1.25" />
+          <SupportedValue
+            DisplayName="1:30"
+            Value="1.5" />
+          <SupportedValue
+            DisplayName="1:45"
+            Value="1.75" />
+          <SupportedValue
+            DisplayName="2:00"
+            Value="2" />
+          <SupportedValue
+            DisplayName="2:15"
+            Value="2.25" />
+          <SupportedValue
+            DisplayName="2:30"
+            Value="2.5" />
+          <SupportedValue
+            DisplayName="2:45"
+            Value="2.75" />
+          <SupportedValue
+            DisplayName="3:00"
+            Value="3" />
+          <SupportedValue
+            DisplayName="3:15"
+            Value="3.25" />
+          <SupportedValue
+            DisplayName="3:30"
+            Value="3.5" />
+          <SupportedValue
+            DisplayName="3:45"
+            Value="3.75" />
+          <SupportedValue
+            DisplayName="4:00"
+            Value="4" />
+          <SupportedValue
+            DisplayName="4:15"
+            Value="4.25" />
+          <SupportedValue
+            DisplayName="4:30"
+            Value="4.5" />
+          <SupportedValue
+            DisplayName="4:45"
+            Value="4.75" />
+          <SupportedValue
+            DisplayName="5:00"
+            Value="5" />
+          <SupportedValue
+            DisplayName="5:15"
+            Value="5.25" />
+          <SupportedValue
+            DisplayName="5:45"
+            Value="5.75" />
+          <SupportedValue
+            DisplayName="6:00"
+            Value="6" />
+          <SupportedValue
+            DisplayName="6:30"
+            Value="6.5" />
+          <SupportedValue
+            DisplayName="7:00"
+            Value="7" />
+          <SupportedValue
+            DisplayName="7:30"
+            Value="7.5" />
+          <SupportedValue
+            DisplayName="8:00"
+            Value="8" />
+          <SupportedValue
+            DisplayName="8:30"
+            Value="8.5" />
+          <SupportedValue
+            DisplayName="9:00"
+            Value="9" />
+          <SupportedValue
+            DisplayName="9:30"
+            Value="9.5" />
+          <SupportedValue
+            DisplayName="10:00"
+            Value="10" />
+          <SupportedValue
+            DisplayName="11:00"
+            Value="11" />
+          <SupportedValue
+            DisplayName="12:00"
+            Value="12" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CounselingServices"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CaseManagment"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HomelessnessPrevention"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="GangPrevention"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DomesticViolencePrevention"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FinanciaManagment"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SubstanceAbuse"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HealthcareServices"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ConflictResolution"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmploymentOrEducation"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FamilyCounseling"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CouplesCounseling"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IndividualCounseling"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="GriefCounseling"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Transportation"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CrisisIntervention"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BenefitsEntitlementsInsurance"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Advocacy"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HomeManagement"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LeaseEducation"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Nutrition"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LegalIssues"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FoodBank"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="GroupCounseling"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Assessment"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FamilySupport"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Meals"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MentalHealthServices"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MonitoringServices"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TransferToAlternateHousingOrHospital"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MedicalEquipment"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Homemaker"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OtherServicesProvided"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Notes"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <NotSortable />
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SignedOff"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="IntakeForm"
+        Association="FK_DailyActivityLog_IntakeForm"
+        FromEnd="DailyActivityLog"
+        ToEnd="IntakeForm" />
+      <NavigationProperty
+        Name="ServiceProvider1"
+        Association="FK_DailyActivityLog_ServiceProviders"
+        FromEnd="DailyActivityLog"
+        ToEnd="ServiceProviders" />
+      <NavigationProperty
+        Name="Log_Addendums"
+        Association="FK_Log_Addendums_DailyActivityLog"
+        FromEnd="DailyActivityLog"
+        ToEnd="Log_Addendums" />
+      <EntityProperty
+        Name="SignedOffBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FairHousingandCivilRightsAssistance"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="GeneralInfoReferral"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsolationIntervention"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Outreach"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ResidentCouncils"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TaxPrepServices"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TranslationInterpretation"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FoodAssistance"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <SupportedValue
+            DisplayName="Yes"
+            Value="True" />
+          <SupportedValue
+            DisplayName="No"
+            Value="False" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Designation"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="AddendumLogCount"
+        Association="AddendumLogCount_DailyActivityLog"
+        FromEnd="DailyActivityLog"
+        ToEnd="AddendumLogCount" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SHPSQL1_DEVData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="DailyActivityLogs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="DailyActivityLog" />
+    <QueryOperation
+      Name="DailyActivityLogs_Single"
+      ReturnType="DailyActivityLog">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="DailyActivityLogs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="DailyActivityLogs_SingleOrDefault"
+      ReturnType="DailyActivityLog">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="DailyActivityLogs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_Log_Addendums_DailyActivityLog"
+      Association="FK_Log_Addendums_DailyActivityLog">
+      <AssociationSetEnd
+        Name="DailyActivityLog"
+        EntitySet="DailyActivityLogs" />
+      <AssociationSetEnd
+        Name="Log_Addendums"
+        EntitySet="Log_Addendums" />
+    </AssociationSet>
+    <AssociationSet
+      Name="AddendumLogCount_DailyActivityLogs"
+      Association="AddendumLogCount_DailyActivityLog">
+      <AssociationSetEnd
+        Name="AddendumLogCount"
+        EntitySet="AddendumLogCounts" />
+      <AssociationSetEnd
+        Name="DailyActivityLog"
+        EntitySet="DailyActivityLogs" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association
+    Name="FK_Log_Addendums_DailyActivityLog">
+    <AssociationEnd
+      Name="DailyActivityLog"
+      Multiplicity="One"
+      EntityType="DailyActivityLog">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Cascade" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Log_Addendums"
+      Multiplicity="Many"
+      EntityType="Log_Addendum" />
+  </Association>
+  <Association
+    Name="AddendumLogCount_DailyActivityLog">
+    <Association.Attributes>
+      <UserDefined />
+    </Association.Attributes>
+    <AssociationEnd
+      Name="AddendumLogCount"
+      EntityType="AddendumLogCount" />
+    <AssociationEnd
+      Name="DailyActivityLog"
+      Multiplicity="One"
+      EntityType="DailyActivityLog">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <DataService
+    Name="SHPSQL1_DEVDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="DailyActivityLogs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="DailyActivityLog" />
+        <SsdlProperty
+          Name="ID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="DailyActivityLog/Properties[ID]" />
+        <SsdlProperty
+          Name="InternalDate"
+          Nullable="False"
+          Type="datetime"
+          Property="DailyActivityLog/Properties[InternalDate]" />
+        <SsdlProperty
+          Name="Date"
+          Nullable="False"
+          Type="datetime"
+          Property="DailyActivityLog/Properties[c_Date]" />
+        <SsdlProperty
+          Name="HoursSpent"
+          Nullable="False"
+          Type="float"
+          Property="DailyActivityLog/Properties[HoursSpent]" />
+        <SsdlProperty
+          Name="Advocacy"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Advocacy]" />
+        <SsdlProperty
+          Name="BenefitsEntitlementsInsurance"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[BenefitsEntitlementsInsurance]" />
+        <SsdlProperty
+          Name="CaseManagment"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[CaseManagment]" />
+        <SsdlProperty
+          Name="ConflictResolution"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[ConflictResolution]" />
+        <SsdlProperty
+          Name="CounselingServices"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[CounselingServices]" />
+        <SsdlProperty
+          Name="CouplesCounseling"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[CouplesCounseling]" />
+        <SsdlProperty
+          Name="CrisisIntervention"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[CrisisIntervention]" />
+        <SsdlProperty
+          Name="DomesticViolencePrevention"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[DomesticViolencePrevention]" />
+        <SsdlProperty
+          Name="EmploymentOrEducation"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[EmploymentOrEducation]" />
+        <SsdlProperty
+          Name="FamilyCounseling"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[FamilyCounseling]" />
+        <SsdlProperty
+          Name="FinanciaManagment"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[FinanciaManagment]" />
+        <SsdlProperty
+          Name="GangPrevention"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[GangPrevention]" />
+        <SsdlProperty
+          Name="GriefCounseling"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[GriefCounseling]" />
+        <SsdlProperty
+          Name="HealthcareServices"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[HealthcareServices]" />
+        <SsdlProperty
+          Name="HomelessnessPrevention"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[HomelessnessPrevention]" />
+        <SsdlProperty
+          Name="HomeManagement"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[HomeManagement]" />
+        <SsdlProperty
+          Name="IndividualCounseling"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[IndividualCounseling]" />
+        <SsdlProperty
+          Name="LeaseEducation"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[LeaseEducation]" />
+        <SsdlProperty
+          Name="Nutrition"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Nutrition]" />
+        <SsdlProperty
+          Name="SubstanceAbuse"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[SubstanceAbuse]" />
+        <SsdlProperty
+          Name="Transportation"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Transportation]" />
+        <SsdlProperty
+          Name="LegalIssues"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[LegalIssues]" />
+        <SsdlProperty
+          Name="FoodBank"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[FoodBank]" />
+        <SsdlProperty
+          Name="GroupCounseling"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[GroupCounseling]" />
+        <SsdlProperty
+          Name="Assessment"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Assessment]" />
+        <SsdlProperty
+          Name="FamilySupport"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[FamilySupport]" />
+        <SsdlProperty
+          Name="Meals"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Meals]" />
+        <SsdlProperty
+          Name="MentalHealthServices"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[MentalHealthServices]" />
+        <SsdlProperty
+          Name="MonitoringServices"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[MonitoringServices]" />
+        <SsdlProperty
+          Name="TransferToAlternateHousingOrHospital"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[TransferToAlternateHousingOrHospital]" />
+        <SsdlProperty
+          Name="MedicalEquipment"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[MedicalEquipment]" />
+        <SsdlProperty
+          Name="Homemaker"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Homemaker]" />
+        <SsdlProperty
+          Name="FairHousingandCivilRightsAssistance"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[FairHousingandCivilRightsAssistance]" />
+        <SsdlProperty
+          Name="GeneralInfoReferral"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[GeneralInfoReferral]" />
+        <SsdlProperty
+          Name="IsolationIntervention"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[IsolationIntervention]" />
+        <SsdlProperty
+          Name="Outreach"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[Outreach]" />
+        <SsdlProperty
+          Name="ResidentCouncils"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[ResidentCouncils]" />
+        <SsdlProperty
+          Name="TaxPrepServices"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[TaxPrepServices]" />
+        <SsdlProperty
+          Name="TranslationInterpretation"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[TranslationInterpretation]" />
+        <SsdlProperty
+          Name="FoodAssistance"
+          Nullable="True"
+          Type="bit"
+          Property="DailyActivityLog/Properties[FoodAssistance]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="OtherServicesProvided"
+          Nullable="True"
+          Type="nvarchar"
+          Property="DailyActivityLog/Properties[OtherServicesProvided]" />
+        <SsdlProperty
+          Name="Notes"
+          Nullable="True"
+          Type="ntext"
+          Property="DailyActivityLog/Properties[Notes]" />
+        <SsdlProperty
+          Name="SignedOff"
+          Nullable="False"
+          Type="bit"
+          Property="DailyActivityLog/Properties[SignedOff]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="SignedOffBy"
+          Nullable="True"
+          Type="nvarchar"
+          Property="DailyActivityLog/Properties[SignedOffBy]" />
+        <SsdlProperty
+          Name="Modified"
+          Nullable="True"
+          Type="datetime"
+          Property="DailyActivityLog/Properties[Modified]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Designation"
+          Nullable="True"
+          Type="nvarchar"
+          Property="DailyActivityLog/Properties[Designation]" />
+        <SsdlForeignKeyProperty
+          Name="Resident"
+          Nullable="False"
+          Type="int"
+          PropertyName="Resident" />
+        <SsdlForeignKeyProperty
+          Name="ServiceProvider"
+          Nullable="False"
+          Type="int"
+          PropertyName="ServiceProvider" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Log_Addendums_DailyActivityLog">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Log_Addendums_DailyActivityLog" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_Log_Addendums_DailyActivityLog]/Members[DailyActivityLog]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_Log_Addendums_DailyActivityLog]/Members[Log_Addendums]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="FK_LogID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="AddendumLogCount_DailyActivityLogs">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="AddendumLogCount_DailyActivityLogs" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[AddendumLogCount_DailyActivityLogs]/Members[AddendumLogCount]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[AddendumLogCount_DailyActivityLogs]/Members[DailyActivityLog]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

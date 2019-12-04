@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.SHP_PSHHC_01.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:IntakeForm" />
+    </EntityType.Attributes>
+    <EntityType.Properties>
+      <KeyProperty>
+        <KeyProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:IntakeForm/Properties[ID]" />
+
+        </KeyProperty.Attributes>
+      </KeyProperty>
+    </EntityType.Properties>
+  </EntityType>
+</Application>

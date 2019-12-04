@@ -1,0 +1,12 @@
+﻿<OutOfBrowserSettings ShortName="SHP_PSHHC_01.Administration" EnableGPUAcceleration="False" ShowInstallMenuItem="False">
+  <OutOfBrowserSettings.Blurb>SHP_PSHHC_01.Administration</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="SHP_PSHHC_01.Administration" Top="0" Left="0" WindowStartupLocation="Manual" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.SecuritySettings>
+    <SecuritySettings ElevatedPermissions="Required" />
+  </OutOfBrowserSettings.SecuritySettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="32,32">Resources/PSHH Logo2.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

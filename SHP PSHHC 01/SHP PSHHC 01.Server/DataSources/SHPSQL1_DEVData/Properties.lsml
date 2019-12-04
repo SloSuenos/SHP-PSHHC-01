@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="c_Property">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="c_Property1"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="PropertyCode"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="4" />
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="City"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="County"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <SupportedValue
+            Value="San Luis Obispo" />
+          <SupportedValue
+            Value="Santa Barbara" />
+          <SupportedValue
+            Value="Ventura" />
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Active"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Property_ID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="IntakeForms"
+        Association="FK_IntakeForm_Properties"
+        FromEnd="Properties"
+        ToEnd="IntakeForm" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_IntakeForm_Properties">
+    <AssociationEnd
+      Name="Properties"
+      Multiplicity="One"
+      EntityType="c_Property">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="IntakeForm"
+      Multiplicity="Many"
+      EntityType="IntakeForm" />
+  </Association>
+  <EntityContainer
+    Name="SHPSQL1_DEVData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Properties"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="c_Property" />
+    <AssociationSet
+      Name="FK_IntakeForm_Properties"
+      Association="FK_IntakeForm_Properties">
+      <AssociationSetEnd
+        Name="Properties"
+        EntitySet="Properties" />
+      <AssociationSetEnd
+        Name="IntakeForm"
+        EntitySet="IntakeForms" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Properties_Single"
+      ReturnType="c_Property">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="c_Property1" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="c_Property1" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Properties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="c_Property1"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'c_Property1' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Properties_SingleOrDefault"
+      ReturnType="c_Property">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="c_Property1" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="c_Property1" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Properties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="c_Property1"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'c_Property1' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SHPSQL1_DEVDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Properties">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Properties" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Property"
+          Nullable="False"
+          Type="nvarchar"
+          Property="c_Property/Properties[c_Property1]" />
+        <SsdlProperty
+          MaxLength="4"
+          Name="PropertyCode"
+          Nullable="False"
+          Type="nvarchar"
+          Property="c_Property/Properties[PropertyCode]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="City"
+          Nullable="False"
+          Type="nvarchar"
+          Property="c_Property/Properties[City]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="County"
+          Nullable="False"
+          Type="nvarchar"
+          Property="c_Property/Properties[County]" />
+        <SsdlProperty
+          Name="Active"
+          Nullable="False"
+          Type="bit"
+          Property="c_Property/Properties[Active]" />
+        <SsdlProperty
+          Name="Property_ID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="c_Property/Properties[Property_ID]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_IntakeForm_Properties">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_IntakeForm_Properties" />
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_IntakeForm_Properties]/Members[Properties]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Property" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SHPSQL1_DEVData/Members[FK_IntakeForm_Properties]/Members[IntakeForm]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PSHHProperty" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

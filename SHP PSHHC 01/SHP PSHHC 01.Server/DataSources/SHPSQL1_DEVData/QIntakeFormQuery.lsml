@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="SHPSQL1_DEVData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <QueryOperation
+      Name="QIntakeFormQuery"
+      ReturnType="IntakeForm*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="And">
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="And">
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="And">
+                                            <BinaryExpression.Left>
+                                              <BinaryExpression
+                                                NodeType="And">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="And">
+                                                    <BinaryExpression.Left>
+                                                      <BinaryExpression
+                                                        NodeType="And">
+                                                        <BinaryExpression.Left>
+                                                          <BinaryExpression
+                                                            NodeType="And">
+                                                            <BinaryExpression.Left>
+                                                              <BinaryExpression
+                                                                NodeType="And">
+                                                                <BinaryExpression.Left>
+                                                                  <BinaryExpression
+                                                                    NodeType="And">
+                                                                    <BinaryExpression.Left>
+                                                                      <BinaryExpression
+                                                                        NodeType="And">
+                                                                        <BinaryExpression.Left>
+                                                                          <BinaryExpression
+                                                                            NodeType="And">
+                                                                            <BinaryExpression.Left>
+                                                                              <BinaryExpression
+                                                                                NodeType="And">
+                                                                                <BinaryExpression.Left>
+                                                                                  <BinaryExpression
+                                                                                    NodeType="And">
+                                                                                    <BinaryExpression.Left>
+                                                                                      <BinaryExpression
+                                                                                        NodeType="Equal">
+                                                                                        <BinaryExpression.Left>
+                                                                                          <ChainExpression>
+                                                                                            <MemberExpression
+                                                                                              Member="Active" />
+                                                                                          </ChainExpression>
+                                                                                        </BinaryExpression.Left>
+                                                                                        <BinaryExpression.Right>
+                                                                                          <ParameterExpression
+                                                                                            Parameter="Active" />
+                                                                                        </BinaryExpression.Right>
+                                                                                      </BinaryExpression>
+                                                                                    </BinaryExpression.Left>
+                                                                                    <BinaryExpression.Right>
+                                                                                      <TernaryExpression
+                                                                                        NodeType="Between">
+                                                                                        <TernaryExpression.First>
+                                                                                          <ChainExpression>
+                                                                                            <MemberExpression
+                                                                                              Member="BirthDate" />
+                                                                                          </ChainExpression>
+                                                                                        </TernaryExpression.First>
+                                                                                        <TernaryExpression.Second>
+                                                                                          <ParameterExpression
+                                                                                            Parameter="BirthDate" />
+                                                                                        </TernaryExpression.Second>
+                                                                                        <TernaryExpression.Third>
+                                                                                          <ParameterExpression
+                                                                                            Parameter="BirthDate1" />
+                                                                                        </TernaryExpression.Third>
+                                                                                      </TernaryExpression>
+                                                                                    </BinaryExpression.Right>
+                                                                                  </BinaryExpression>
+                                                                                </BinaryExpression.Left>
+                                                                                <BinaryExpression.Right>
+                                                                                  <BinaryExpression
+                                                                                    NodeType="Equal">
+                                                                                    <BinaryExpression.Left>
+                                                                                      <ChainExpression>
+                                                                                        <MemberExpression
+                                                                                          Member="ChronicHomeless" />
+                                                                                      </ChainExpression>
+                                                                                    </BinaryExpression.Left>
+                                                                                    <BinaryExpression.Right>
+                                                                                      <ParameterExpression
+                                                                                        Parameter="ChronicHomeless" />
+                                                                                    </BinaryExpression.Right>
+                                                                                  </BinaryExpression>
+                                                                                </BinaryExpression.Right>
+                                                                              </BinaryExpression>
+                                                                            </BinaryExpression.Left>
+                                                                            <BinaryExpression.Right>
+                                                                              <BinaryExpression
+                                                                                NodeType="Equal">
+                                                                                <BinaryExpression.Left>
+                                                                                  <ChainExpression>
+                                                                                    <MemberExpression
+                                                                                      Member="ConsentFormSigned" />
+                                                                                  </ChainExpression>
+                                                                                </BinaryExpression.Left>
+                                                                                <BinaryExpression.Right>
+                                                                                  <ParameterExpression
+                                                                                    Parameter="ConsentFormSigned" />
+                                                                                </BinaryExpression.Right>
+                                                                              </BinaryExpression>
+                                                                            </BinaryExpression.Right>
+                                                                          </BinaryExpression>
+                                                                        </BinaryExpression.Left>
+                                                                        <BinaryExpression.Right>
+                                                                          <TernaryExpression
+                                                                            NodeType="Between">
+                                                                            <TernaryExpression.First>
+                                                                              <ChainExpression>
+                                                                                <MemberExpression
+                                                                                  Member="DateCaseOpened" />
+                                                                              </ChainExpression>
+                                                                            </TernaryExpression.First>
+                                                                            <TernaryExpression.Second>
+                                                                              <ParameterExpression
+                                                                                Parameter="DateCaseOpened" />
+                                                                            </TernaryExpression.Second>
+                                                                            <TernaryExpression.Third>
+                                                                              <ParameterExpression
+                                                                                Parameter="DateCaseOpened1" />
+                                                                            </TernaryExpression.Third>
+                                                                          </TernaryExpression>
+                                                                        </BinaryExpression.Right>
+                                                                      </BinaryExpression>
+                                                                    </BinaryExpression.Left>
+                                                                    <BinaryExpression.Right>
+                                                                      <BinaryExpression
+                                                                        NodeType="Equal">
+                                                                        <BinaryExpression.Left>
+                                                                          <ChainExpression>
+                                                                            <MemberExpression
+                                                                              Member="Disabled" />
+                                                                          </ChainExpression>
+                                                                        </BinaryExpression.Left>
+                                                                        <BinaryExpression.Right>
+                                                                          <ParameterExpression
+                                                                            Parameter="Disabled" />
+                                                                        </BinaryExpression.Right>
+                                                                      </BinaryExpression>
+                                                                    </BinaryExpression.Right>
+                                                                  </BinaryExpression>
+                                                                </BinaryExpression.Left>
+                                                                <BinaryExpression.Right>
+                                                                  <BinaryExpression
+                                                                    NodeType="Equal">
+                                                                    <BinaryExpression.Left>
+                                                                      <ChainExpression>
+                                                                        <MemberExpression
+                                                                          Member="FarmWorker" />
+                                                                      </ChainExpression>
+                                                                    </BinaryExpression.Left>
+                                                                    <BinaryExpression.Right>
+                                                                      <ParameterExpression
+                                                                        Parameter="FarmWorker" />
+                                                                    </BinaryExpression.Right>
+                                                                  </BinaryExpression>
+                                                                </BinaryExpression.Right>
+                                                              </BinaryExpression>
+                                                            </BinaryExpression.Left>
+                                                            <BinaryExpression.Right>
+                                                              <BinaryExpression
+                                                                NodeType="Equal">
+                                                                <BinaryExpression.Left>
+                                                                  <ChainExpression>
+                                                                    <MemberExpression
+                                                                      Member="MediCal" />
+                                                                  </ChainExpression>
+                                                                </BinaryExpression.Left>
+                                                                <BinaryExpression.Right>
+                                                                  <ParameterExpression
+                                                                    Parameter="MediCal" />
+                                                                </BinaryExpression.Right>
+                                                              </BinaryExpression>
+                                                            </BinaryExpression.Right>
+                                                          </BinaryExpression>
+                                                        </BinaryExpression.Left>
+                                                        <BinaryExpression.Right>
+                                                          <BinaryExpression
+                                                            NodeType="Equal">
+                                                            <BinaryExpression.Left>
+                                                              <ChainExpression>
+                                                                <MemberExpression
+                                                                  Member="NoHealthInsurance" />
+                                                              </ChainExpression>
+                                                            </BinaryExpression.Left>
+                                                            <BinaryExpression.Right>
+                                                              <ParameterExpression
+                                                                Parameter="NoHealthInsurance" />
+                                                            </BinaryExpression.Right>
+                                                          </BinaryExpression>
+                                                        </BinaryExpression.Right>
+                                                      </BinaryExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <BinaryExpression
+                                                        NodeType="Equal">
+                                                        <BinaryExpression.Left>
+                                                          <ChainExpression>
+                                                            <MemberExpression
+                                                              Member="PrivateHealthInsurance" />
+                                                          </ChainExpression>
+                                                        </BinaryExpression.Left>
+                                                        <BinaryExpression.Right>
+                                                          <ParameterExpression
+                                                            Parameter="PrivateHealthInsurance" />
+                                                        </BinaryExpression.Right>
+                                                      </BinaryExpression>
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="PsychotropicMedications" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="PsychotropicMedications" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="ReferralType" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="ReferralType" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Section8" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Section8" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Sex" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="Sex" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="Equal">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="SingleFemaleHeadOfHousehold" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="SingleFemaleHeadOfHousehold" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Equal">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="TBRA" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="TBRA" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="VASH" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="VASH" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Veteran" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Veteran" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ServiceProvider1" />
+                        <MemberExpression
+                          Member="ServiceProviderID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="ServiceProviderID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="c_Property" />
+                    <MemberExpression
+                      Member="Property_ID" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Property_ID" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="IntakeForms" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Active"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="BirthDate"
+        IsOptional="True"
+        ParameterType=":Date?" />
+      <QueryOperationParameter
+        Name="BirthDate1"
+        IsOptional="True"
+        ParameterType=":Date?" />
+      <QueryOperationParameter
+        Name="ChronicHomeless"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="ConsentFormSigned"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="DateCaseOpened"
+        IsOptional="True"
+        ParameterType=":Date?" />
+      <QueryOperationParameter
+        Name="DateCaseOpened1"
+        IsOptional="True"
+        ParameterType=":Date?" />
+      <QueryOperationParameter
+        Name="Disabled"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="FarmWorker"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="MediCal"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="NoHealthInsurance"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="PrivateHealthInsurance"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="PsychotropicMedications"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="ReferralType"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="Section8"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Sex"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="SingleFemaleHeadOfHousehold"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="TBRA"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="VASH"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Veteran"
+        IsOptional="True"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="ServiceProviderID"
+        IsOptional="True"
+        ParameterType=":Int32?" />
+      <QueryOperationParameter
+        Name="Property_ID"
+        IsOptional="True"
+        ParameterType=":Int32?" />
+    </QueryOperation>
+  </EntityContainer>
+</ServiceApplication>

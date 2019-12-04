@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' != 'Release' ">
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{42fa38a5-8394-4469-958a-938864c38eeb}</ProjectGuid>
+    <LightSwitchVersion>v5.0</LightSwitchVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <PropertyGroup>
+    <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion-->
+    <LightSwitchProjectTypeV45>Client</LightSwitchProjectTypeV45>
+    <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
+    <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultPlatform>AnyCPU</DefaultPlatform>
+    <ClientProjectName>HTMLClient</ClientProjectName>
+    <ServerProjectReference>..\SHP PSHHC 01.Server\SHP PSHHC 01.Server.vbproj</ServerProjectReference>
+    <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\dark-theme-2.5.4.css" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="Content\Images\msls-black-icons-18.png" />
+    <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
+    <Content Include="Content\Images\msls-loader-dark.gif" />
+    <Content Include="Content\Images\msls-loader-light.gif" />
+    <Content Include="Content\Images\msls-white-icons-18.png" />
+    <Content Include="Content\Images\msls-white-icons-36.png" />
+    <Content Include="Content\Images\user-logo.png" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="Content\light-theme-2.5.4.css" />
+    <Content Include="Content\msls-2.5.4.css" />
+    <Content Include="Content\msls-2.5.4.min.css" />
+    <Content Include="Content\msls-dark-2.5.4.css" />
+    <Content Include="Content\msls-light-2.5.4.css" />
+    <Content Include="default.htm" />
+    <Content Include="Content\user-customization.css" />
+    <Content Include="Content\Images\user-logo.ico" />
+    <Content Include="Content\Images\user-logo-144.png" />
+    <Content Include="Content\Images\user-splash-screen.png" />
+    <Content Include="Content\Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Screens\ActivitiesQuery.lsml.js">
+      <DependentUpon>ActivitiesQuery.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddDailyActivityLog.lsml.js">
+      <DependentUpon>AddDailyActivityLog.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditIntakeForm.lsml.js">
+      <DependentUpon>AddEditIntakeForm.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditLog_Addendum.lsml.js">
+      <DependentUpon>AddEditLog_Addendum.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Admin\AdminScreens.lsml.js">
+      <DependentUpon>AdminScreens.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseHome.lsml.js">
+      <DependentUpon>BrowseHome.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\DischargeClients.lsml.js">
+      <DependentUpon>DischargeClients.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\EditIntakeForm.lsml.js">
+      <DependentUpon>EditIntakeForm.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\IntakeFormsGridEditingTemplate.lsml.js">
+      <DependentUpon>IntakeFormsGridEditingTemplate.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\IntakesQuery.lsml.js">
+      <DependentUpon>IntakesQuery.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewDailyActivityLog.lsml.js">
+      <DependentUpon>ViewDailyActivityLog.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewIntakeForm.lsml.js">
+      <DependentUpon>ViewIntakeForm.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\datajs-1.1.3.js" />
+    <Content Include="Scripts\datajs-1.1.3.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="Scripts\msls-2.5.4-vsdoc.js" />
+    <Content Include="Scripts\msls-2.5.4.js" />
+    <Content Include="Scripts\msls-2.5.4.min.js" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\PSHGlobal.js" />
+    <Content Include="Scripts\Tippy.js" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+    <Content Include="UserCode\DailyActivityLog.lsml.js">
+      <DependentUpon>
+      </DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceMetadataReference Include="..\SHP PSHHC 01.Server\SHP PSHHC 01.Server.vbproj">
+      <Visible>false</Visible>
+    </ServiceMetadataReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Client.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Properties\SHPSQL1_DEVData\ActivityLogCounts.lsml" />
+    <LightSwitchModel Include="Properties\SHPSQL1_DEVData\DailyActivityLogs.lsml" />
+    <LightSwitchModel Include="Screens\ActivitiesQuery.lsml" />
+    <LightSwitchModel Include="Screens\AddDailyActivityLog.lsml" />
+    <LightSwitchModel Include="Screens\AddEditIntakeForm.lsml" />
+    <LightSwitchModel Include="Screens\AddEditLog_Addendum.lsml" />
+    <LightSwitchModel Include="Screens\Admin\AddProperties.lsml" />
+    <LightSwitchModel Include="Screens\Admin\AddServiceProviders.lsml" />
+    <LightSwitchModel Include="Screens\Admin\AdminScreens.lsml" />
+    <LightSwitchModel Include="Screens\Admin\BrowseCityList.lsml" />
+    <LightSwitchModel Include="Screens\BrowseHome.lsml" />
+    <LightSwitchModel Include="Screens\DischargeClients.lsml" />
+    <LightSwitchModel Include="Screens\EditIntakeForm.lsml" />
+    <LightSwitchModel Include="Screens\IntakeFormsGridEditingTemplate.lsml" />
+    <LightSwitchModel Include="Screens\IntakesQuery.lsml" />
+    <LightSwitchModel Include="Screens\ViewDailyActivityLog.lsml" />
+    <LightSwitchModel Include="Screens\ViewIntakeForm.lsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ClientBuildFile Include="GeneratedArtifacts\model.json">
+      <SubFolder>Content\Resources\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\data.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
